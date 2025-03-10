@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/health-body-interact/',
+  base:  mode === 'production' ? '/health-body-interact/' : '/',
   server: {
     host: "::",
     port: 8080,
