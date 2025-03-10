@@ -15,7 +15,7 @@ const Index: React.FC = () => {
         <div className="flex flex-1 overflow-hidden">
           {/* Left Sidebar - Profile and Human Body */}
           <motion.div 
-            className="w-64 flex-shrink-0 flex flex-col border-r border-gray-200 bg-white overflow-hidden"
+            className="w-64 flex-shrink-0 flex flex-col border-r border-gray-200 bg-gray-200 overflow-hidden"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -23,6 +23,8 @@ const Index: React.FC = () => {
             {/* Profile Section */}
             <div className="p-4 border-b border-gray-200">
               <Sidebar />
+              <div className='text-center text-blue-500'>Patient Id: 235235</div>
+
             </div>
             
             {/* Human Body Hotspots */}
@@ -43,7 +45,7 @@ const Index: React.FC = () => {
           
           {/* Right Sidebar - Risk Scores */}
           <motion.div 
-            className="w-72 flex-shrink-0 border-l border-gray-200 overflow-y-auto bg-white"
+            className="w-96 flex-shrink-0 border-l border-gray-200 overflow-y-auto bg-gray-200"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}

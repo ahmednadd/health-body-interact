@@ -21,7 +21,7 @@ const MetricsPanel: React.FC = () => {
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
               <Activity className="h-8 w-8 text-primary" />
             </div>
-            <h2 className="text-2xl font-medium">Health Dashboard</h2>
+            <h2 className="text-2xl font-medium">Shield Ecosystem</h2>
             <p className="text-muted-foreground">
               Select a region on the human body to view detailed health metrics and analysis.
             </p>
