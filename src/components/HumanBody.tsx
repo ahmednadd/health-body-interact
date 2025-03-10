@@ -10,86 +10,166 @@ const HumanBody: React.FC = () => {
   const { regions, selectedRegion } = useBodyContext();
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center">
-      <div className="w-full max-w-xs md:max-w-sm lg:max-w-md aspect-[1/2] relative">
+    <div className="relative w-full h-full flex items-center justify-center p-6">
+      <div className="w-full max-w-xs aspect-[1/2] relative">
         <motion.div 
           className="w-full h-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          {/* SVG Human Body Outline */}
+          {/* SVG Skeleton Outline */}
           <svg
             viewBox="0 0 200 400"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className="w-full h-full"
           >
+            {/* Skull */}
             <path
-              d="M100 30C113.807 30 125 18.8071 125 5H75C75 18.8071 86.1929 30 100 30Z"
-              fill="rgba(0,0,0,0.05)"
-              stroke="currentColor"
+              d="M100 20C113 20 124 32 124 42L124 60C124 70 113 80 100 80C87 80 76 70 76 60L76 42C76 32 87 20 100 20Z"
+              fill="rgba(240,240,240,0.9)"
+              stroke="rgba(120,120,120,0.8)"
+              strokeWidth="1.5"
+            />
+            
+            {/* Jaw */}
+            <path
+              d="M85 65V75C85 85 115 85 115 75V65"
+              fill="none"
+              stroke="rgba(120,120,120,0.8)"
+              strokeWidth="1"
+            />
+            
+            {/* Neck */}
+            <path
+              d="M90 80L90 95M110 80L110 95"
+              stroke="rgba(120,120,120,0.8)"
+              strokeWidth="1.5"
+            />
+            
+            {/* Shoulders */}
+            <path
+              d="M90 95H55M110 95H145"
+              stroke="rgba(120,120,120,0.8)"
+              strokeWidth="1.5"
+            />
+            
+            {/* Collar bones */}
+            <path
+              d="M90 95L100 105L110 95"
+              stroke="rgba(120,120,120,0.8)"
+              strokeWidth="1.5"
+            />
+            
+            {/* Spine */}
+            <path
+              d="M100 105L100 210"
+              stroke="rgba(120,120,120,0.8)"
+              strokeWidth="2"
+            />
+            
+            {/* Ribs */}
+            <path
+              d="M100 115C100 115 80 120 75 125C70 130 70 135 75 140C80 145 100 145 100 145M100 115C100 115 120 120 125 125C130 130 130 135 125 140C120 145 100 145 100 145"
+              stroke="rgba(120,120,120,0.8)"
               strokeWidth="1.5"
             />
             <path
-              d="M65 60C65 46.1929 76.1929 35 90 35H110C123.807 35 135 46.1929 135 60V100H65V60Z"
-              fill="rgba(0,0,0,0.05)"
-              stroke="currentColor"
+              d="M100 125C100 125 80 130 75 135C70 140 70 145 75 150C80 155 100 155 100 155M100 125C100 125 120 130 125 135C130 140 130 145 125 150C120 155 100 155 100 155"
+              stroke="rgba(120,120,120,0.8)"
               strokeWidth="1.5"
             />
             <path
-              d="M135 100H65L60 180H140L135 100Z"
-              fill="rgba(0,0,0,0.05)"
-              stroke="currentColor"
+              d="M100 135C100 135 82 140 78 145C74 150 74 155 78 160C82 165 100 165 100 165M100 135C100 135 118 140 122 145C126 150 126 155 122 160C118 165 100 165 100 165"
+              stroke="rgba(120,120,120,0.8)"
+              strokeWidth="1.5"
+            />
+            
+            {/* Pelvis */}
+            <path
+              d="M65 210C65 210 80 220 100 220C120 220 135 210 135 210"
+              stroke="rgba(120,120,120,0.8)"
+              strokeWidth="1.5"
+              fill="rgba(240,240,240,0.7)"
+            />
+            <path
+              d="M65 210L65 230L85 240M135 210L135 230L115 240"
+              stroke="rgba(120,120,120,0.8)"
               strokeWidth="1.5"
             />
             <path
-              d="M140 180H60L55 240H145L140 180Z"
-              fill="rgba(0,0,0,0.05)"
-              stroke="currentColor"
+              d="M85 240L100 220L115 240"
+              stroke="rgba(120,120,120,0.8)"
+              strokeWidth="1.5"
+            />
+            
+            {/* Arms */}
+            <path
+              d="M55 95L45 140L35 185"
+              stroke="rgba(120,120,120,0.8)"
               strokeWidth="1.5"
             />
             <path
-              d="M60 100L40 120V170L60 180"
-              fill="rgba(0,0,0,0.05)"
-              stroke="currentColor"
+              d="M145 95L155 140L165 185"
+              stroke="rgba(120,120,120,0.8)"
+              strokeWidth="1.5"
+            />
+            
+            {/* Hands */}
+            <path
+              d="M35 185L30 195M35 185L35 195M35 185L40 195"
+              stroke="rgba(120,120,120,0.8)"
+              strokeWidth="1"
+            />
+            <path
+              d="M165 185L160 195M165 185L165 195M165 185L170 195"
+              stroke="rgba(120,120,120,0.8)"
+              strokeWidth="1"
+            />
+            
+            {/* Legs */}
+            <path
+              d="M85 240L80 300L75 360"
+              stroke="rgba(120,120,120,0.8)"
               strokeWidth="1.5"
             />
             <path
-              d="M140 100L160 120V170L140 180"
-              fill="rgba(0,0,0,0.05)"
-              stroke="currentColor"
+              d="M115 240L120 300L125 360"
+              stroke="rgba(120,120,120,0.8)"
               strokeWidth="1.5"
             />
+            
+            {/* Feet */}
             <path
-              d="M40 120L25 150V165L40 170"
-              fill="rgba(0,0,0,0.05)"
-              stroke="currentColor"
-              strokeWidth="1.5"
+              d="M75 360L65 370M75 360L75 370M75 360L85 370"
+              stroke="rgba(120,120,120,0.8)"
+              strokeWidth="1"
             />
             <path
-              d="M160 120L175 150V165L160 170"
-              fill="rgba(0,0,0,0.05)"
-              stroke="currentColor"
-              strokeWidth="1.5"
+              d="M125 360L115 370M125 360L125 370M125 360L135 370"
+              stroke="rgba(120,120,120,0.8)"
+              strokeWidth="1"
             />
+            
+            {/* Skeleton glow effect */}
             <path
-              d="M70 240L65 340L85 350V370L95 380H105L115 370V350L135 340L130 240"
-              fill="rgba(0,0,0,0.05)"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            />
-            <path
-              d="M65 340L55 350L65 360"
-              fill="rgba(0,0,0,0.05)"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            />
-            <path
-              d="M135 340L145 350L135 360"
-              fill="rgba(0,0,0,0.05)"
-              stroke="currentColor"
-              strokeWidth="1.5"
+              d="M100 20C113 20 124 32 124 42L124 60C124 70 113 80 100 80C87 80 76 70 76 60L76 42C76 32 87 20 100 20Z
+              M90 80L90 95M110 80L110 95
+              M90 95H55M110 95H145
+              M90 95L100 105L110 95
+              M100 105L100 210
+              M65 210C65 210 80 220 100 220C120 220 135 210 135 210
+              M65 210L65 230L85 240M135 210L135 230L115 240
+              M85 240L100 220L115 240
+              M55 95L45 140L35 185
+              M145 95L155 140L165 185
+              M85 240L80 300L75 360
+              M115 240L120 300L125 360"
+              stroke="rgba(var(--primary), 0.2)"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
 
